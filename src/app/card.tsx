@@ -25,15 +25,15 @@ interface CardGroupProps {
  */
 export const Card = ({ title, iconName, children }: CardProps) => {
     return (
-        <div className='flex flex-col px-6 py-6 border-1 gap-2 rounded-2xl dark:border-zinc-700'>
+        <div className='flex flex-col px-6 py-6 border-1 gap-2 rounded-2xl border-zinc-400 dark:border-zinc-700'>
             <div className='flex flex-row items-center gap-x-2'>
                 { /* render icon if a name is provided. */ }
-                { iconName && <Icon icon={ iconName } className='text-xl text-gray-400' /> }
+                { iconName && <Icon icon={ iconName } className='text-xl text-gray-600 dark:text-gray-400' /> }
                 <CardHeader title={ title } />
             </div>
             { children }
         </div>
-    )
+    );
 }
 
 /**
@@ -46,5 +46,5 @@ export const CardGroup = ({ children }: CardGroupProps) => {
         <div className='flex flex-col'>
             { children }
         </div>
-    )
+    );
 }
